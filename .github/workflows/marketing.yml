@@ -17,7 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: installing for marketing
       - run: npm install
+      - name: building for marketing
       - run: npm run build
 
       - uses: shinyinc/action-aws-cli@v1.2
