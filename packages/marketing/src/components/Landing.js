@@ -5,7 +5,6 @@ import { Typography } from '@mui/material';
 import MaterialReactTable from 'material-react-table';
 import { BrowserRouter as  Link } from 'react-router-dom';
 
-
 function Fib() {
   const [seenIndexes, setSeenIndexes] = useState([]);
   const [values, setvalues] = useState({});
