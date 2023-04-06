@@ -1,0 +1,25 @@
+version: '3'
+services:
+  container:
+    environment:
+      - WDS_SOCKET_PORT=0
+    
+    build:
+      dockerfile: Dockerfile
+      context: ./container
+    volumes:
+      - /home/node/app/node_modules
+      - ./container:/home/node/app
+    ports:
+      - '8080:8080'
+  marketing:
+    environment:
+      - WDS_SOCKET_PORT=0
+    build:
+      dockerfile: Dockerfile
+      context: ./marketing
+    volumes:
+      - /home/node/app/node_modules
+      - ./marketing:/home/node/app
+    ports:
+      - '8081:8081'
