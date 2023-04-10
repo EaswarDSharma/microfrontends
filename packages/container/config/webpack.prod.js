@@ -18,7 +18,6 @@ const prodConfig = {
       remotes: {
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
           //marketing: 'marketing@http://localhost:8081/remoteEntry.js',
-
       },
       shared: packageJson.dependencies,
     }),
