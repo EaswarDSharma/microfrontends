@@ -10,7 +10,6 @@ const prodConfig = {
   output: {
     filename: '[name].[contenthash].js',
     publicPath: '/container/latest/',
-  //publicPath: 'http://localhost:8080/',
 
   },
   plugins: [
