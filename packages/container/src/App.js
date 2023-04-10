@@ -5,7 +5,6 @@ import Progress from './components/Progress';
 import Header from './components/Header';
 
 const MarketingLazy = lazy(() => import('./components/MarketingApp'));
-
 const history = createBrowserHistory();
 
 export default () => {
