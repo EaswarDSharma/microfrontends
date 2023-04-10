@@ -3,7 +3,7 @@ import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Progress from './components/Progress';
 import Header from './components/Header';
-
+ 
 const MarketingLazy = lazy(() => import('./components/MarketingApp'));
 const history = createBrowserHistory();
 
