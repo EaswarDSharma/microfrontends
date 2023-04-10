@@ -9,16 +9,16 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-  //  publicPath: '/container/latest/',
-  publicPath: 'http://localhost:8080/',
+    publicPath: '/container/latest/',
+  //publicPath: 'http://localhost:8080/',
 
   },
   plugins: [
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
-//        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
-          marketing: 'marketing@http://localhost:8081/remoteEntry.js',
+        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
+          //marketing: 'marketing@http://localhost:8081/remoteEntry.js',
 
       },
       shared: packageJson.dependencies,
