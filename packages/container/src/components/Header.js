@@ -17,7 +17,7 @@ export default function Header({ isSignedIn, onSignOut }) {
       <Grid container  sx={{ flexGrow: 1 }}>
           <AppBar position="static" elevation={0}>
             <Toolbar>
-            <Grid xs={6} xsOffset={3} md={2} mdOffset={0}>
+            <Grid item xs={6} xsoffset={3} md={2}>
           <IconButton 
           color="secondary" 
           aria-label="add to shopping cart" 

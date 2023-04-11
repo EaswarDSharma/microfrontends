@@ -1,9 +1,10 @@
 import React, { useState, useEffect,useMemo} from 'react';
 import axios from 'axios';
-import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
+import {Box,TextField,InputBase,Paper} from '@mui/material';
 import MaterialReactTable from 'material-react-table';
 import { BrowserRouter as  Link } from 'react-router-dom';
+import SearchIcon from '@mui/icons-material/Search';
+import IconButton from '@mui/material/IconButton';
 
 function Fib() {
   const [seenIndexes, setSeenIndexes] = useState([]);
@@ -77,6 +78,7 @@ function Fib() {
         justifyContent="center"
         alignItems="center"
         minHeight="100vh"
+        
         >
         <MaterialReactTable columns={columns} data={arr} />
         </Box>
@@ -93,6 +95,21 @@ function Fib() {
         />
         <button>Submit</button>
       </form>
+        
+      <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+    >
+      <InputBase
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Search Google Maps"
+        inputProps={{ 'aria-label': 'search google maps' }}
+      />
+      <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+        <SearchIcon onClick={handleSubmit}/>
+      </IconButton>
+      </Paper>
+
       <h3>Indexes I have seen:</h3>
       <RenderSeenIndexes />
       <h3>Calculated values:</h3>

@@ -13,7 +13,7 @@ function Copyright() {
       {'.'}
     </Typography>
   );
-} 
+}
 
 export default function Pricing() {
 
