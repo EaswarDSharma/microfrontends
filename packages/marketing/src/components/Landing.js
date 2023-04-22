@@ -130,7 +130,7 @@ function Fib() {
       m={2}
       bgcolor="white"
       borderRadius={4}
-      p={0}
+      p={2}
       boxSizing="border-box"
       overflow="auto"  
       minWidth="80vw"
