@@ -1,6 +1,5 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
-// create a new file called `MuiClassNameSetup.js` at the root or src folder.
 import {
   StylesProvider,
   createGenerateClassName,
