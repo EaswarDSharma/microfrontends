@@ -142,8 +142,7 @@ function Fib() {
       alignItems="center"
       >
 
-      <h3>Indexes I have seen:</h3> </Box>
-      <Box>
+      <h3>Indexes I have seen:</h3> 
       <RenderSeenIndexes />   </Box>
      
       <Box 
