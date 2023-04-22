@@ -98,8 +98,14 @@ function Fib() {
     });
 
   return (
-    <div>
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
+    <div >
+
+    <div style={{ display: 'flex', 
+    justifyContent: 'center',
+     alignItems: 'center', 
+     height: '10vh',
+    
+     }}>
        
        <Paper
       component="form"

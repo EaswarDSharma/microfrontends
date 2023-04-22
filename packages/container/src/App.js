@@ -19,8 +19,8 @@ export default () => {
   
 
   return (
-    <div >
-            <StylesProvider generateClassName={generateClassName}>
+    <div>
+            <StylesProvider generateClassName={generateClassName} >
     <Router history={history}>
           <Header
           />
