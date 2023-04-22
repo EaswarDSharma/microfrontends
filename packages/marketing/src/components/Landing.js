@@ -143,7 +143,7 @@ function Fib() {
       alignItems="center"
       >
       <h3>Indexes I have seen:</h3>
-     <div style={{paddingTop:2,paddingBottom:2}} > <RenderSeenIndexes />  </div> 
+     <div style={{paddingTop:2,paddingBottom:5}} > <RenderSeenIndexes />  </div> 
        </Box>  
      
       <Box 
