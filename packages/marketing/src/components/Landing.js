@@ -130,7 +130,6 @@ function Fib() {
       m={2}
       bgcolor="white"
       borderRadius={4}
-      p={2}
       boxSizing="border-box"
       overflow="auto"  
       minWidth="80vw"
@@ -143,7 +142,7 @@ function Fib() {
       >
 
       <h3>Indexes I have seen:</h3> 
-      <RenderSeenIndexes />   </Box>
+      <RenderSeenIndexes style={{p:2}}/>   </Box>
      
       <Box 
        bgcolor="#ffe17c;" minWidth={1}
