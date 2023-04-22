@@ -128,6 +128,8 @@ function Fib() {
      >
       <Box 
       m={2}
+      paddingLeft={2}
+      paddingRight={2}
       bgcolor="white"
       borderRadius={4}
       boxSizing="border-box"
@@ -140,10 +142,9 @@ function Fib() {
       justifyContent="space-between"
       alignItems="center"
       >
-
-      <h3>Indexes I have seen:</h3> 
-      <div style={{p:2}}>
-      <RenderSeenIndexes /> </div>  </Box>  
+      <h3>Indexes I have seen:</h3>
+     <div style={{paddingTop:2,paddingBottom:2}} > <RenderSeenIndexes />  </div> 
+       </Box>  
      
       <Box 
        bgcolor="#ffe17c;" minWidth={1}
