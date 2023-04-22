@@ -1,6 +1,6 @@
 import React, { useState, useEffect,useMemo} from 'react';
 import axios from 'axios';
-import {Box,TextField,InputBase,Paper} from '@mui/material';
+import {Box,Container, InputAdornment, TextField,InputBase,Paper,Grid} from '@mui/material';
 import MaterialReactTable from 'material-react-table';
 import { BrowserRouter as  Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
@@ -38,6 +38,24 @@ function Fib() {
       console.log(error);
     }
   }, []);
+  const handleClick = async (event) => {
+    if(index.trim()!==""){
+    event.preventDefault();
+    await axios.post('/api/values', {
+      index: index.toLowerCase(),
+    });
+    setIndex('');
+    try {
+      const seenIndexes = await axios.get('/api/values/all');
+      setSeenIndexes(seenIndexes.data);
+//      console.log("index  "+seenIndexes.data)
+      const values = await axios.get('/api/values/current');
+      setvalues(values.data);
+      console.log("values "+JSON.stringify(values.data))
+    } catch (error) {
+      console.log(error);
+    }}
+  };
   const handleSubmit = async (event) => {
     if(index.trim()!==""){
     event.preventDefault();
@@ -73,13 +91,7 @@ function Fib() {
       arr.sort((a,b) => (a.key > b.key) ? 1 : ((b.key > a.key) ? -1 : 0))
 
     return (
-        <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-        
-        >
+        <Box>
         <MaterialReactTable columns={columns} data={arr} />
         </Box>
       );
@@ -87,33 +99,34 @@ function Fib() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>Enter your index:</label>
-        <input
-          value={index}
-          onChange={(event) => setIndex(event.target.value)}
-        />
-        <button>Submit</button>
-      </form>
-        
-      <Paper
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
+       
+       <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+      sx={{ p: '2px 4px', width: 250 }}
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Search Google Maps"
-        inputProps={{ 'aria-label': 'search google maps' }}
+        placeholder="Search for recipes"
+        inputProps={{ 'aria-label': 'search for recipe' }}
+        onChange={(event) => setIndex(event.target.value)}
       />
-      <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-        <SearchIcon onClick={handleSubmit}/>
+      <IconButton  sx={{ p: '10px' }} aria-label="search" >
+        <SearchIcon onClick={handleClick}/>
       </IconButton>
       </Paper>
-
+      </div>
+      <Grid container justifyContent="center" alignItems="flex-start">
+      <Grid item>
       <h3>Indexes I have seen:</h3>
       <RenderSeenIndexes />
       <h3>Calculated values:</h3>
       <Rendervalues />
+
+      </Grid>
+      </Grid>
+      
+      
       </div>
   );
 }

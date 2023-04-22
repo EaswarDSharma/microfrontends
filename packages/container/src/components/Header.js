@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar,Grid,IconButton,Toolbar } from '@mui/material';
+import { AppBar,Button,Grid,IconButton,Toolbar } from '@mui/material';
 import { Link  } from 'react-router-dom';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 
@@ -14,23 +14,23 @@ export default function Header({ isSignedIn, onSignOut }) {
 
   return (
     <React.Fragment>
-      <Grid container  sx={{ flexGrow: 1 }}>
-          <AppBar position="static" elevation={0}>
+          <AppBar position="static" style={{ borderRadius: '10px' ,background: '#4CAF50' }} elevation={0}>
             <Toolbar>
-            <Grid item xs={6} xsoffset={3} md={2}>
-          <IconButton 
-          color="secondary" 
-          aria-label="add to shopping cart" 
+          <IconButton
+          style={{ color: '#99ff99' }}
+          aria-label="add to shopping cart"
           edge="start"
-          href="/"
-          >
+          href="/">
           <ShoppingCartTwoToneIcon />
           </IconButton>
-          </Grid>
-          <Link to="/otherpage">Other Page</Link>
+          <div style={{ flexGrow: 1 }}></div>
+          <Button variant="text" sx={{
+             color: '#ccffcc',
+              fontSize: '1.2rem', 
+              fontFamily: 'Calibri', }} href="/otherpage">
+            About</Button>
           </Toolbar>
           </AppBar>
-          </Grid>
     </React.Fragment>
   );
 }
