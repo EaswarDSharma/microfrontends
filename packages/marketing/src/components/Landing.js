@@ -142,7 +142,8 @@ function Fib() {
       >
 
       <h3>Indexes I have seen:</h3> 
-      <RenderSeenIndexes style={{p:2}}/>   </Box>
+      <div style={{p:2}}>
+      <RenderSeenIndexes /> </div>  </Box>  
      
       <Box 
        bgcolor="#ffe17c;" minWidth={1}
