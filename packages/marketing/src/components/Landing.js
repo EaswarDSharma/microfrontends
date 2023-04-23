@@ -107,7 +107,7 @@ function Fib() {
        
        <Paper
       component="form"
-      sx={{ p: '2px 4px', width: 250 }}
+      sx={{ p: '2px 4px', width: 300 }}
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
