@@ -141,9 +141,9 @@ function Fib() {
       flexDirection="column" 
       justifyContent="space-between"
       alignItems="center"
-      >
+      > <div style={{paddingTop:2}} > 
       <h3>Indexes I have seen:</h3>
-     <div style={{paddingTop:2,paddingBottom:5}} > <RenderSeenIndexes />  </div> 
+     <RenderSeenIndexes />  </div> 
        </Box>  
      
       <Box 
