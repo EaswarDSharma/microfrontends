@@ -107,8 +107,12 @@ function Fib() {
        
        <Paper
       component="form"
-      sx={{ p: '2px 4px', width: 300 }}
-    >
+      sx={{ 
+        p: '2px 4px', 
+        width: "300px",
+        display: "flex",
+        justifyContent: "flex-end",
+      }}>
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         placeholder="Search for recipes"
