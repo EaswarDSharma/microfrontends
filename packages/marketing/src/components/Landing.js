@@ -1,8 +1,7 @@
 import React, { useState, useEffect,useMemo} from 'react';
 import axios from 'axios';
-import {Box,Container, Divider, TextField,InputBase,Paper,Grid} from '@mui/material';
+import {Box,InputBase,Paper} from '@mui/material';
 import MaterialReactTable from 'material-react-table';
-import { BrowserRouter as  Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
 
@@ -19,6 +18,17 @@ function Fib() {
       {
         accessorKey: 'link',
         header: 'link',
+        Cell: ({ cell, renderedCellValue }) => (
+          React.createElement(
+            'a', 
+            {
+              onClick: (e) => e.stopPropagation(),
+              href: `https://${cell.getValue()}`,
+              target: '_blank',
+            },
+            renderedCellValue
+          )
+        ),
       },
     ],
     [],);
