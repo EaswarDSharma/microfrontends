@@ -48,10 +48,8 @@ function Fib() {
     try {
       const seenIndexes = await axios.get('/api/values/all');
       setSeenIndexes(seenIndexes.data);
-//      console.log("index  "+seenIndexes.data)
       const values = await axios.get('/api/values/current');
       setvalues(values.data);
-      console.log("values "+JSON.stringify(values.data))
     } catch (error) {
       console.log(error);
     }}
@@ -66,16 +64,13 @@ function Fib() {
     try {
       const seenIndexes = await axios.get('/api/values/all');
       setSeenIndexes(seenIndexes.data);
-//      console.log("index  "+seenIndexes.data)
       const values = await axios.get('/api/values/current');
       setvalues(values.data);
-      console.log("values "+JSON.stringify(values.data))
     } catch (error) {
       console.log(error);
     }}
   };
   const RenderSeenIndexes = React.memo(() => {
-    console.log('rendering SeenIndexes');
     const ind = [];
     for (let key in values) {
       ind.push(key);
