@@ -11,7 +11,6 @@ const generateClassName = createGenerateClassName({
   productionPrefix: 'ma',
 });
 
-
 export default ({ history }) => {
   return (
     <div>
