@@ -1,7 +1,6 @@
 # dependencies
-./packages/container/node_modules
 
-./packages/marketing/node_modules
+/node_modules
 
 # testing
 /coverage
