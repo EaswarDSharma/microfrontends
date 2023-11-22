@@ -34,11 +34,11 @@ function Fib() {
     [],);
   useEffect(() => {
     const fetchvalues = async () => {
-      const values = await axios.get('/api/values/current');
+      const values = await axios.get('http://35.244.58.168/api/values/current');
       setvalues(values.data);
     };
     const fetchIndexes = async () => {
-      const seenIndexes = await axios.get('/api/values/all');
+      const seenIndexes =await axios.get('http://35.244.58.168/api/values/all');
       setSeenIndexes(seenIndexes.data);
     };
     try {
@@ -56,9 +56,9 @@ function Fib() {
     });
     setIndex('');
     try {
-      const seenIndexes = await axios.get('/api/values/all');
+      const seenIndexes = await axios.get('http://35.244.58.168/api/values/all');
       setSeenIndexes(seenIndexes.data);
-      const values = await axios.get('/api/values/current');
+      const values =await axios.get('http://35.244.58.168/api/values/current');
       setvalues(values.data);
     } catch (error) {
       console.log(error);
