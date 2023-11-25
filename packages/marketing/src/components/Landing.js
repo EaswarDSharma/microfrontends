@@ -34,7 +34,7 @@ function Fib() {
     [],);
   useEffect(() => {
     const fetchvalues = async () => {
-      const values = await axios.get('http://35.244.58.168/api/values/current');
+      const values = await axios.get('https://foodipes.com/api/values/current');
       setvalues(values.data);
     };
     const fetchIndexes = async () => {
